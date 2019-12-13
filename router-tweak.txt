@@ -48,3 +48,11 @@ echo performance > /sys/devices/system/cpu/cpu12/cpufreq/scaling_governor
 echo performance > /sys/devices/system/cpu/cpu13/cpufreq/scaling_governor
 echo performance > /sys/devices/system/cpu/cpu14/cpufreq/scaling_governor
 echo performance > /sys/devices/system/cpu/cpu15/cpufreq/scaling_governor
+
+
+#NIC related
+echo 524288 > /sys/module/nf_conntrack/parameters/hashsize
+ethtool -G ens1f0 rx 4096 tx 4096
+ethtool -L ens1f0 combined 8
+ethtool -K lro off gro off tso off
+ethtool -A ens1f0 autoneg off rx off tx off duplex full speed 10000
