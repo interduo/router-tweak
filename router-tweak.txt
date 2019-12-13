@@ -56,3 +56,7 @@ ethtool -G ens1f0 rx 4096 tx 4096
 ethtool -L ens1f0 combined 8
 ethtool -K lro off gro off tso off
 ethtool -A ens1f0 autoneg off rx off tx off duplex full speed 10000
+
+
+#kernel boot options 
+noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off tsx=on tsx_async_abort=off mitigations=off
