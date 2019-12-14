@@ -77,6 +77,7 @@ ethtool -G ens1f0 rx 4096 tx 4096
 ethtool -L ens1f0 combined 8
 ethtool -K lro off gro off tso off
 ethtool -A ens1f0 autoneg off rx off tx off duplex full speed 10000
+ethtool -C ens1f0 adaptive-tx on adaptive-rx on
 
 
 #kernel boot options 
