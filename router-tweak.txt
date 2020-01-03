@@ -18,7 +18,6 @@
 - cat /proc/sys/net/netfilter/nf_conntrack_count,
 - lsmod,
 - modinfo ixgbe,
-- ifconfig eth1
 - i skrypty kolejkowania.
 
 
