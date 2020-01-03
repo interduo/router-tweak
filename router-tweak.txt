@@ -18,6 +18,7 @@
 - cat /proc/sys/net/netfilter/nf_conntrack_count,
 - lsmod,
 - modinfo ixgbe,
+- ifconfig eth1
 - i skrypty kolejkowania.
 
 
@@ -78,6 +79,7 @@ ethtool -L ens1f0 combined 8
 ethtool -K lro off gro off tso off gso off
 ethtool -A ens1f0 autoneg off rx off tx off duplex full speed 10000
 ethtool -C ens1f0 adaptive-tx on adaptive-rx on
+ifconfig ens1f0 txqueuelen 10000
 
 
 #kernel boot options 
