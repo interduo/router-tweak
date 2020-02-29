@@ -27,7 +27,6 @@
 - cat /proc/sys/net/core/netdev_max_backlog
 - for i in `lspci | grep ES| awk '{print $1}'`; do lspci -s $i -vv | grep GT; done
 
-
 - i skrypty kolejkowania.
 
 
@@ -90,7 +89,7 @@ ethtool -A ens1f0 autoneg off rx off tx off duplex full speed 10000
 #20200229 - u nas bardziej się sprawdza:
 ethtool -C ens1f0 rx-usecs 125
 niż:
-ethtool -C ens1f0 adaptive-tx on adaptive-rx on
+#ethtool -C ens1f0 adaptive-tx on adaptive-rx on
 ###
 
 ip link set ens1f0 txqueuelen 
