@@ -2,7 +2,8 @@
 
 #show me your settings
 - ip link show,
-- ethtool nazwa interfejsu (a w szczególności ustawienia offloadingu: gro i lro),
+- ethtool nazwa interfejsu (a w szczególności ustawienia offloadingu: gro i lro), 
+(ethtool -c, ethtool -g, ethtool -k, ethtool -l)
 - uname -a,
 - uptime,
 - top (wciśnij 1) i ctrl+s oraz skopiuj dane dotyczące CPU,
@@ -11,13 +12,22 @@
 - numactl --show,
 - numactl --hardware,
 - cat /proc/cpuinfo,
+- lscpu
 - iptables -L -n -t nat,
 - iptables -L -n -t filter,
 - iptables -L -n -t mangle,
 - iptables -L -n -t raw,
 - cat /proc/sys/net/netfilter/nf_conntrack_count,
+(lub conntrack -C)
 - lsmod,
 - modinfo ixgbe,
+- cat /proc/net/softnet_stat
+- cat /sys/devices/system/cpu/cpufreq/policy*/scaling_governor
+- cpufreq-info | grep current
+- cat /proc/sys/net/core/netdev_max_backlog
+- for i in `lspci | grep ES| awk '{print $1}'`; do lspci -s $i -vv | grep GT; done
+
+
 - i skrypty kolejkowania.
 
 
